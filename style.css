@@ -28,6 +28,7 @@
   text-align: center;
   padding-top: 10px;
   float: left;
+  position: relative;
 }
 
 .boxType1 {
@@ -40,4 +41,10 @@
 
 .boxType3 {
   background: blue;
+}
+
+a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
