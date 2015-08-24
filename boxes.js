@@ -33,8 +33,7 @@ $(function() {
   /* 3.2 Add links inside all red box divs that take the user to galvanize. 
   Then add an on click handler that alerts the user that you can never leave the page. 
   Make sure the user won't leave the page after the alert! */
-  // $('.boxType1').append('<a href="http://www.galvanize.com"></a>').css('position,relative');
-  // $('a').css({position: 'absolute', top: '0', left: '0', width: '100%', height: '100%'}); 
+  // $('.boxType1').append('<a href="http://www.galvanize.com">Galvanize</a>').css('position,relative');
   // $('a').click(function(e) {
   //   e.preventDefault();
   //   alert('You can never leave this page! Hahahahaha!');
