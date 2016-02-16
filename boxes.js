@@ -21,4 +21,16 @@ $(function() {
 
   $( '.box:not(#secretBox)').width('2px');
 
+  $('#container').on('click', function(){
+
+    console.log('x: ' + event.pageX + ', ' + 'y: ' + event.pageY);
+      });
+
+  $( '.boxType1' ).wrap( '<a href="http://galvanize.com"></a>' );
+
+  $('.box').on('click', function(){
+      $('https://placekitten.com/160/160').toggle()
+  })
+
+
 });
