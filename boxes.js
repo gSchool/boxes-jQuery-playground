@@ -7,19 +7,19 @@ $(document).ready(function(){
 $(function() {
   console.log( "double ready! ");
 
-  $('#secretBox').css({'background-color': 'white'});
+  // $('#secretBox').css({'background-color': 'white'});
+  //
+  // $('#secretBox').append( '<h1>secret box!</h1>' );
+  //
+  // $( '#row1' ).find( 'div' ).addClass( 'boxType3' );
+  //
+  // $( '#row4 div' ).last().hide();
+  //
+  // $( '.boxType1:not(.boxType3)' ).css({'background-color': 'white'});
+  //
+  // $( '#row2' ).children().slice( 0,2 ).removeClass();
 
-  $('#secretBox').append( '<h1>secret box!</h1>' );
-
-  $( '#row1' ).find( 'div' ).addClass( 'boxType3' );
-
-  $( '#row4 div' ).last().hide();
-
-  $( '.boxType1:not(.boxType3)' ).css({'background-color': 'white'});
-
-  $( '#row2' ).children().slice( 0,2 ).removeClass();
-
-  $( '.box:not(#secretBox)').width('2px');
+  // $( '.box:not(#secretBox)').width('2px');
 
   $('#container').on('click', function(){
 
@@ -28,8 +28,11 @@ $(function() {
 
   $( '.boxType1' ).wrap( '<a href="http://galvanize.com"></a>' );
 
+  $('.box').append('<img src="http://www.fillmurray.com/100/100" alt="muuray"/>')
+  $('.box').children().hide();
+
   $('.box').on('click', function(){
-      $('https://placekitten.com/160/160').toggle()
+      $(this).children().toggle()
   })
 
 
