@@ -23,50 +23,48 @@ $(document).ready(function () {
   // });
   //
 
-  // $('.box').on('click', function () {
-  //   var self = this;
-  //   $(this).addClass('box-animate');
-  //
-  //   var animate = setInterval(function(){
-  //     // image is already in the .box and we want to remove it.
-  //     var imgExistsAlready = $(self).children('img')[0] ? true : false;
-  //     if ( imgExistsAlready ) {
-  //       $(self).empty();
-  //       return exitAnimate(self);
-  //     }
-  //
-  //
-  //     // add an image to the box.
-  //     $(self).append('<img src="http://loremflickr.com/150/150/dog">');
-  //     // check if image was added.
-  //     var imgExists = $(self).children('img')[0] ? true : false;
-  //     if (imgExists) {
-  //       return exitAnimate(self);
-  //     } else {
-  //       $(self).empty();
-  //       return exitAnimate(self);
-  //     }
-  //   }, 100);
-  //
-  //   function exitAnimate (klass) {
-  //     $(klass).removeClass('box-animate');
-  //     return clearInterval(animate);
-  //   }
-  //
-  // });
+  $('.box').on('click', function () {
+    var self = this;
+    $(this).addClass('box-animate');
 
-document.getElementById('container').addEventListener('click', function (event) {
-  if(event.target.id == 'container') {
-    $(this).css({'background-color': 'rgb(0, 209, 8)'});
-  }
-  else {
-    $('#container').css({'background-color': 'black'});
-    $(event.target).css({'background-color': 'white'});
-    console.log(event.target);
-  }
+    var animate = setInterval(function(){
+      // image is already in the .box and we want to remove it.
+      var imgExistsAlready = $(self).children('img')[0] ? true : false;
+      if ( imgExistsAlready ) {
+        $(self).empty();
+        return exitAnimate(self);
+      }
+
+
+      // add an image to the box.
+      $(self).append('<img src="http://loremflickr.com/150/150/dog">');
+      // check if image was added.
+      var imgExists = $(self).children('img')[0] ? true : false;
+      if (imgExists) {
+        return exitAnimate(self);
+      } else {
+        $(self).empty();
+        return exitAnimate(self);
+      }
+    }, 100);
+
+    function exitAnimate (klass) {
+      $(klass).removeClass('box-animate');
+      return clearInterval(animate);
+    }
+
   });
-
-
-});
-
-// // Write a click handler on the container div. The click handler should turn the container background to black and the background of the original div that was clicked to white. If the user original div that was clicked happened to be the container div, change the background of the container div to lime green. You should not use any selectors for this exercise. You can do it completely with what is given to you in the event callback.
+//
+// document.getElementById('container').addEventListener('click', function (event) {
+//   if(event.target.id == 'container') {
+//     $(this).css({'background-color': 'rgb(0, 209, 8)'});
+//   }
+//   else {
+//     $('#container').css({'background-color': 'black'});
+//     $(event.target).css({'background-color': 'white'});
+//     console.log(event);
+//   }
+//   });
+//
+//
+// });
