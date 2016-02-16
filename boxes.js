@@ -1,1 +1,4 @@
-console.log("hello world");
+$(function() {
+    console.log( "ready!" );
+});
+// console.log("hello world");
