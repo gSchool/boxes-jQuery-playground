@@ -2,29 +2,34 @@
 $(function(){
   console.log("ready");
 
+  $('#container').on('click', function(e){
 
-  $('#secretBox').css('background', 'white')
-    .append("<h1> secret box </h1>");
+    if(!$(event.target).is($(this))){
 
+      $(event.target).css('background','white');
+      $(this).css('background','black');
 
-  $('#row1').children()
-    .addClass('boxType3');
+    } else
 
+      $(this).css('background','lime');
 
-  $('.box:nth-last-child(1)')
-    .css('display', 'none');
-
-
-  $( ".boxType1").css( "background-color", "white" );
+  });
 
 
-  $("#row2").find("div:nth-child(1), div:nth-child(2)")
-    .removeClass();
+  $( ".boxType1").append("<a href='http://www.galvanize.com'>Galvanize</a>")
+      .on('click', function(){
+
+        if(alert("Sorry you can't leave")){
+        }else
+          $('a').attr('href', 'http://localhost:63342/boxes-jQuery-playground/boxes.html');
+  });
 
 
-  $("#container div").not("#secretBox, .row")
-    .css('width','2px');
+  $('div .box').append("<img style='display: none' src='http://wallpaperhdbase.com/wp-content/gallery/ugly-puppy-pictures/Old+Ugly+Chi.jpg' height='140px'>")
+      .on('click', function(){
 
+      $(this).children().toggle('fast');
+  });
 
 });
 
