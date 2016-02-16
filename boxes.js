@@ -28,12 +28,26 @@ $(function() {
 
   $( '.boxType1' ).wrap( '<a href="http://galvanize.com"></a>' );
 
+  $( '.boxType1' ).on('click', function() {
+      event.preventDefault();
+      alert("You can never leave.");
+  })
+
   $('.box').append('<img src="http://www.fillmurray.com/100/100" alt="muuray"/>')
   $('.box').children().hide();
 
   $('.box').on('click', function(){
       $(this).children().toggle()
   })
+
+  $('#container').on('click',  function( event ) {
+    if( event.target.id === 'container' ){
+      $(this).css({'background-color': 'limegreen'});
+    } else {
+      $(this).css({'background-color': 'black'});
+      $(event.target).css({'background-color': 'white'})
+    }
+    });
 
 
 });
