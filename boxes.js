@@ -37,9 +37,10 @@ $(function() {
     $(this).css({'background-color': 'white'});
   });
 
-  $('#container').on('click', function(){
-    // $(this).css({'background-color': 'black'});
-    // $(this).children().children().first().css({'background-color': 'white'});
+  $('#container').on('click', function(e){
+    if(e.target.id === "container") {
+      $(this).css({'background-color': 'rgb(59, 255, 0)'});
+    }
   });
 
 });
