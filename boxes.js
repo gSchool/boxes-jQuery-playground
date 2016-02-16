@@ -33,10 +33,13 @@ $(function() {
 
   $('.box').on('click', function(){
     $(this).children().toggle();
+    $(this).parent().parent().css({'background-color': 'black'});
+    $(this).css({'background-color': 'white'});
   });
 
   $('#container').on('click', function(){
-    $('#container').css({'background-color': 'black'});
+    // $(this).css({'background-color': 'black'});
+    // $(this).children().children().first().css({'background-color': 'white'});
   });
 
 });
