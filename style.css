@@ -29,7 +29,11 @@
   padding-top: 10px;
   float: left;
 }
-
+img {
+  width: 90%;
+  height: 80%;
+  margin: 4px 0px 4px 7px;
+}
 .boxType1 {
   background: red;
 }
