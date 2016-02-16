@@ -25,6 +25,7 @@ $(function(){
   $("#container div").not("#secretBox, .row")
     .css('width','2px');
 
+
 });
 
 
