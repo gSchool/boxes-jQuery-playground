@@ -20,12 +20,18 @@ $(function() {
     e.preventDefault();
   });
   $('.box').on('click', function(){
-    $(this).addClass('puppy');
-    $('.puppy').css({("background-image": "url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRJTJk1vRYIzRaAzigs2A-338F-fi308r2ySl4DqXyzmU56lBSiFPJ9CSw')"});
-
+    $(this).toggleClass('puppy')
   });
-
-
-
+    $('#container').on('click', function(e) {
+      if(e.target.id === 'container'){
+      $(this).css({'background-color': 'lime'})
+    }
+      else {
+      $(this).css({'background-color': 'black'})
+      $(e.target).css({'background-color': 'white'})
+    }
+  })
 });
+
+
 // console.log("hello world");
