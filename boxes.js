@@ -3,7 +3,8 @@ $(document).ready(function(){
   $('#secretBox').css({'backgroundColor':'white'}).append("<h1>I'm a secret box!</h1>");
   $('#row1').children().removeClass().addClass('box boxType3');
   $('#row4 > div:last').css({'display':'none'});
-  $('body').find('.boxType1').css({'backgroundColor':'white'})
+  $('body').find('.boxType1').css({'backgroundColor':'white'});
+  $('#row2 > div:first-child, #row2 > div:nth-child(2)').removeClass();
 });
 
 
