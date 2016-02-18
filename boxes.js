@@ -19,7 +19,7 @@ $( document ).ready(function() {
     //   console.log(e.pageX);
     //   console.log(e.pageY);
     // })
-    //
+
     // $('.boxType1').append('<a href="www.galvanize.com">Click me</a>')
     // $('a').on('click', function(){
     //   alert("You can never leave!!");
