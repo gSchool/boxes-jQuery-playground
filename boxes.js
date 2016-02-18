@@ -1,24 +1,24 @@
-// $( document ).ready(function() {
-//   alert("Ready for DOM manipulation.");
-// });
+$( document ).ready(function() {
+  alert("Ready for DOM manipulation.");
+});
 $(function() {
   alert("Ready for DOM manipulation.");
   $("#secretBox").css({'background': 'white'});
 
-  // var $div = $('<div>', {
-  //   'id':'secretBox'
-  // }).appendTo('#secretBox');
-  // $("<h1></h1>").text("secret box!").appendTo($div);
-  //
-  // $("#row1").addClass("boxType3");
-  //
-  // $("#row4 :last-child").hide();
-  //
-  // $(".boxType1").css({'background': 'white'});
-  //
-  // $("#row2 :nth-child(-n+2)").css({'background': 'transparent'});
-  //
-  // $('.box:not(div#secretBox)').width('2px')
+  var $div = $('<div>', {
+    'id':'secretBox'
+  }).appendTo('#secretBox');
+  $("<h1></h1>").text("secret box!").appendTo($div);
+
+  $("#row1").addClass("boxType3");
+
+  $("#row4 :last-child").hide();
+
+  $(".boxType1").css({'background': 'white'});
+
+  $("#row2 :nth-child(-n+2)").css({'background': 'transparent'});
+
+  $('.box:not(div#secretBox)').width('2px')
 
   $("#container").on('click', function(e) {
     console.log(e.pageX, e.pageY);
