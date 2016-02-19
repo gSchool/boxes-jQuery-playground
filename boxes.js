@@ -1,15 +1,15 @@
 // // Exercise 1,2
-// $(function() {
-//   // alert("Ready for DOM manipulation, baby.");
-//   $("#secretBox").css("background-color","white").append("<span><h1>secret box!</h1></span>")
-//   $('#row4 div:last-child').css("display", "none");
-//   $('.boxType1').css("background-color","white");
-//   $('#row2 div:eq(0)').css("background","none");
-//   $('#row2 div:eq(1)').css("background","none");
-//   //$('#row2 div:nth-last-child(n+3)').css("background","none");
-//   $('#row1').children().attr("class","box boxType3");
-//   $("div").not(".row, #secretBox, #container").css("width", "2px");
-// });
+$(function() {
+  // alert("Ready for DOM manipulation, baby.");
+  $("#secretBox").css("background-color","white").append("<span><h1>secret box!</h1></span>")
+  $('#row4 div:last-child').css("display", "none");
+  $('.boxType1').css("background-color","white");
+  $('#row2 div:eq(0)').css("background","none");
+  $('#row2 div:eq(1)').css("background","none");
+  //$('#row2 div:nth-last-child(n+3)').css("background","none");
+  $('#row1').children().attr("class","box boxType3");
+  $("div").not(".row, #secretBox, #container").css("width", "2px");
+});
 
 // console.log("hello world");
 
@@ -32,9 +32,7 @@
   //   $(this).children().toggle('slow');
   // });
 
-  // ternary operator
-  // $(event.target).hasClass('box') ? $(event.target).css("background-color","white") : $(event.target).css("background-color","limegreen")
-
+// last one
   // $('#container').on('click', function(e){
   //   $(this).css("background-color","black");
   //   var 
