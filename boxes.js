@@ -53,16 +53,14 @@ $(function() {
   If the user original div that was clicked happened to be the container div, 
   change the background of the container div to lime green. 
   You should not use any selectors for this exercise.*/
-  // $('#container').click(function(e) {
-  //   var tgt = e.target;
-  //   if (tgt.classList.contains('box')) {
-  //     this.style.backgroundColor = 'black';
-  //     tgt.style.backgroundColor = 'white';
+  // $('#container').on('click',function(e) {
+  //   var $tgt = $(e.target);
+  //   if ($tgt.hasClass('box')) {
+  //     $(this).css('background-color', 'black');
+  //     $tgt.css('background-color', 'white');
   //   } else {
-  //     this.style.backgroundColor = 'limegreen';
+  //     $(this).css('background-color', 'limegreen');
   //   }
-  // });
-    
   // });
 
 });
