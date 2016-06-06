@@ -50,4 +50,12 @@ $(document).ready(function(){
     console.log('y-axis', e.pageY - offset.top);
 	});
 
+//Add links inside all red box divs that take the user to galvanize.  Make sure the user won't leave the page after the alert!
+	$('.boxType1').append('<a target="_blank" href = "http://www.galvanize.com/">werds</a>');
+//Then add an on click handler that alerts the user that you can never leave the page.
+	var a = $('a');
+	$(a).on('click', function(e){
+		console.log('entering prevent default');
+		e.preventDefault();
+	});
 });
