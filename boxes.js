@@ -22,7 +22,8 @@ $(function () {
 
   $('#row2 div:nth-child(-n+2)').each(function() {
 
-    $(this).removeClass();
+    //$(this).removeClass();
+    $(this).removeAttr('style');
   });
 
   $('#container div:not(.row)').not('#secretBox').each(function() {
