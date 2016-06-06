@@ -34,4 +34,12 @@ $(function () {
 
     console.log(event.pageX, event.pageY);
   });
+
+  $('.boxType1').append('<a href="www.galvanize.com">Click Me</a>');
+
+  $('a').on('click', function(event) {
+
+    alert('You can never leave!');
+    event.preventDefault();
+  });
 });
