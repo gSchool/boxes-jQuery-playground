@@ -25,10 +25,10 @@ $(function () {
     $(this).removeClass();
   });
 
-  $('#container div:not(.row)').not('#secretBox').each(function() {
-
-    $(this).css('width', '2px');
-  });
+  // $('#container div:not(.row)').not('#secretBox').each(function() {
+  //
+  //   $(this).css('width', '2px');
+  // });
 
   $('#container').on('click', function(event) {
 
@@ -41,5 +41,16 @@ $(function () {
 
     alert('You can never leave!');
     event.preventDefault();
+  });
+
+  $('.box').on('click', function() {
+
+    if ($(this).hasClass('kitten')) {
+      $(this).empty();
+    } else {
+      $(this).append('<img src="https://placekitten.com/g/70/70">');
+    }
+
+    $(this).toggleClass('kitten');
   });
 });
