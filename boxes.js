@@ -38,9 +38,16 @@ $(document).ready(function(){
 	});
 
 //Get all divs inside the container that are not row divs and are not the secret box div.  Set the width of the divs to 2 pixels.
-	$('div').each(function(){
-		var divs = $('.box').not('#secretBox');
-		divs.css('width', '2px');
+	// $('div').each(function(){
+	// 	var divs = $('.box').not('#secretBox');
+	// 	divs.css('width', '2px');
+	// });
+
+//Add an on click handler to the container div.  Console log the x and y position of the click.
+	$('#container').on('click', function(e){
+    var offset = $(this).offset();
+    console.log('x-axis', e.pageX - offset.left);
+    console.log('y-axis', e.pageY - offset.top);
 	});
 
 });
