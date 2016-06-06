@@ -29,4 +29,9 @@ $(function () {
 
     $(this).css('width', '2px');
   });
+
+  $('#container').on('click', function(event) {
+
+    console.log(event.pageX, event.pageY);
+  });
 });
