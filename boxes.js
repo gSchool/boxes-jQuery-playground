@@ -9,8 +9,8 @@ $(document).ready(alertReady);
 		alert('ready for DOM manipulation');
 }
 
-//change css and add h1 to secretBox
 $(document).ready(function(){
+//change css and add h1 to secretBox
 	console.log('entering secretBox');
 	$('#secretBox').css('background-color', 'white');
 	$('#secretBox').append('<h1>Secret Box!</p>');
@@ -19,10 +19,13 @@ $(document).ready(function(){
 	console.log('finding all child divs of first row');
 	var row1 = $('#row1').children();
 	console.log(row1);
-	$(row1).toggleClass('boxType3');
-});
+	$(row1).removeClass();
+	$(row1).addClass('box boxType3');
+	console.log('changed all divs in first column to have class of "boxType3" ');
 
-// $('#row4 boxType1').on('mouseover', function(){
-// 	console.log('deleting last div of last column');
-// 	$('div').remove();
-// });
+//Make the last box in the last row disappear.
+	var row4Last = $('#row4').children().last();
+	console.log('row4LastChild', row4Last);
+	console.log('found last child of row4');
+	$(row4Last).removeClass();
+});
