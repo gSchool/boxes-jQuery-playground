@@ -20,11 +20,7 @@ $(function () {
     $(this).css('background-color', 'white');
   });
 
-  $('#row2 div:nth-child(-n+2)').each(function() {
-
-    //$(this).removeClass();
-    $(this).removeAttr('style');
-  });
+  $('#row2 div:nth-child(-n+2)').removeClass();
 
   $('#container div:not(.row)').not('#secretBox').css('width', '52px');
 
