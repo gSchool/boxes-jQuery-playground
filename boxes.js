@@ -26,10 +26,7 @@ $(function () {
     $(this).removeAttr('style');
   });
 
-  $('#container div:not(.row)').not('#secretBox').each(function() {
-
-    $(this).css('width', '52px');
-  });
+  $('#container div:not(.row)').not('#secretBox').css('width', '52px');
 
   $('#container').on('click', function(event) {
 
