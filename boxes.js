@@ -20,12 +20,27 @@ $(document).ready(function(){
 	var row1 = $('#row1').children();
 	console.log(row1);
 	$(row1).removeClass();
+	console.log('removed original class of boxtype');
 	$(row1).addClass('box boxType3');
-	console.log('changed all divs in first column to have class of "boxType3" ');
+	console.log('set all divs in first column to have class of "boxType3" ');
 
 //Make the last box in the last row disappear.
 	var row4Last = $('#row4').children().last();
 	console.log('row4LastChild', row4Last);
 	console.log('found last child of row4');
 	$(row4Last).removeClass();
+
+//Get the first two divs in the second row.  Take away all styling from the divs
+	$('#row2').each (function(){
+		var row2FirstTwo = $(this).children().slice(0,2).show();
+		console.log('first two children of row 2', row2FirstTwo);
+		$(row2FirstTwo).removeClass();
+	});
+
+//Get all divs inside the container that are not row divs and are not the secret box div.  Set the width of the divs to 2 pixels.
+	$('div').each(function(){
+		var divs = $('.box').not('#secretBox');
+		divs.css('width', '2px');
+	});
+
 });
