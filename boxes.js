@@ -25,10 +25,10 @@ $(function () {
     $(this).removeClass();
   });
 
-  // $('#container div:not(.row)').not('#secretBox').each(function() {
-  //
-  //   $(this).css('width', '2px');
-  // });
+  $('#container div:not(.row)').not('#secretBox').each(function() {
+
+    $(this).css('width', '52px');
+  });
 
   $('#container').on('click', function(event) {
 
