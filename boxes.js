@@ -32,7 +32,17 @@ $(function () {
 
   $('#container').on('click', function(event) {
 
+    //console.log(event.target === this);
     console.log(event.pageX, event.pageY);
+
+    if (event.target === this) {
+
+      $(this).css('background-color', 'LimeGreen');
+    } else {
+
+      $(this).css('background-color', 'black');
+      $(event.target).css('background-color', 'white');
+    }
   });
 
   $('.boxType1').append('<a href="www.galvanize.com">Click Me</a>');
