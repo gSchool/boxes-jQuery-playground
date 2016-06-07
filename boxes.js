@@ -74,11 +74,11 @@ $(document).ready(function(){
 	// });
 	//Write a click handler __on the container div__.  The click handler should turn the container background to black and the background of the original div that was clicked to white.  If the user original div that was clicked happened to be the container div, change the background of the container div to lime green.  You __should not__ use any selectors for this exercise.  You can do it completely with what is given to you in the event callback.
 	$('#container').on('click', function(e){
-		if ((e.target).hasClass('box')){
+		if (e.target === this){
+			$(this).css('background-color','green');
+		} else {
 			$(e.target).css('background-color','white');
 			$(this).css('background-color','black');
-		} else {
-
 		}
 	});
 
