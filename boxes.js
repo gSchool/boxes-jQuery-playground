@@ -50,12 +50,28 @@ $(document).ready(function(){
     console.log('y-axis', e.pageY - offset.top);
 	});
 
-//Add links inside all red box divs that take the user to galvanize.  Make sure the user won't leave the page after the alert!
+//Add links inside all red box divs that take the user to galvanize.
 	$('.boxType1').append('<a target="_blank" href = "http://www.galvanize.com/">werds</a>');
 //Then add an on click handler that alerts the user that you can never leave the page.
 	var a = $('a');
 	$(a).on('click', function(e){
 		console.log('entering prevent default');
 		e.preventDefault();
+		//Make sure the user won't leave the page after the alert!
+		confirm("You'll never get out of this maze");
 	});
+//For all box divs, add a click handler that adds an image of a cute puppy to the box.  If the image is clicked again, remove the cute puppy.
+
+	$('.box').on('click', function(){
+		console.log('entering background change');
+		var box = $(this);
+		if(!(box.hasClass('url'))){
+		box.addClass('url');
+		box.css('background-image', 'url(https://upload.wikimedia.org/wikipedia/commons/0/03/Lorem.gif)');
+	} else {
+		box.css('background-image', 'none');
+		box.removeClass('url');
+	}
+	});
+
 });
