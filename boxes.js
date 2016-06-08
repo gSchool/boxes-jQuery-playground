@@ -35,11 +35,8 @@ $(document).ready(function() {
   //3.4
   $('#container').on('click', function(x){
     if(x.target.id === 'container'){
-      console.log(x.target);
       $(this).css('background-color', 'lightgreen');
     }else{
-      console.log(x.target);
-      console.log('xxx');
       $(x.target).css('background-color', 'white');
       $('#container').css('background-color', 'black');
     }
