@@ -12,17 +12,23 @@ $(function() {
     console.log(e.clientX);
     console.log(e.clientY);
   });
+});
 
+
+$(function() {
   $('.boxType1').not("#secretBox").append('<a href="#">Go to galvanize.com</a>').click(function() {
     event.preventDefault();
     alert("Sorry, but you can't leave the page");
   });
+})
 
-  // $(".box").click(function(){
-  //   console.log("click works");
-  //   $( this ).toggleClass('puppy');
-  // });
-});
+//following adds puppy class
+// $(function() {
+//   $(".box").click(function(){
+//     console.log("click works");
+//     $( this ).toggleClass('puppy');
+//   });
+// });
 
 
 $(function() {
