@@ -25,13 +25,23 @@ $(document).ready(function() {
     //   return false;
     // });
   //3.3
-  $('.box').append('<img class="pup" src="http://science-all.com/images/wallpapers/cute-puppy-pictures/cute-puppy-pictures-8.jpg"/>')
-  $('.pup').css({'max-width':'100%'})
-  $('.pup').hide();
-
-  $('.box').click(function() {
-    $(this).children().toggle();
-  })
+  // $('.box').append('<img class="pup" src="http://science-all.com/images/wallpapers/cute-puppy-pictures/cute-puppy-pictures-8.jpg"/>')
+  // $('.pup').css({'max-width':'100%'})
+  // $('.pup').hide();
+  //
+  // $('.box').click(function() {
+  //   $(this).children().toggle();
+  // })
   //3.4
-  
-});
+  $('#container').on('click', function(x){
+    if(x.target.id === 'container'){
+      console.log(x.target);
+      $(this).css('background-color', 'lightgreen');
+    }else{
+      console.log(x.target);
+      console.log('xxx');
+      $(x.target).css('background-color', 'white');
+      $('#container').css('background-color', 'black');
+    }
+  });
+})
