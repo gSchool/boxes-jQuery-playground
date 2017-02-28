@@ -35,8 +35,7 @@ $(document).ready(function(){
   });
 
   $('#container').children().click(function(){
-    $(this).css('background-color','white');
-    console.log($(this).children());
+
     $('#container').css('background-color','black');
     event.stopPropagation();
   });
