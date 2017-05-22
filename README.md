@@ -11,7 +11,7 @@ Reference [this page](https://learn.jquery.com/using-jquery-core/document-ready/
 Go to the [MDN docs for selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors).  Read through the docs to get an idea of how selectors work.  Next, look at the [jQuery page on selectors](https://learn.jquery.com/using-jquery-core/selecting-elements/).
 
 1. Find the secretBox on the page. Set the background color to white.  Add an h1 tag that says, "secret box!"
-2. Find all child divs of the first row.  Set the class for each div to boxType3.
+2. Find all child divs of the first row.  Add the class boxType3 to all of these divs. 
 3. Make the last box in the last row disappear. (Hint, look into the dispaly style.  Also, you should only get back one element from your selector.).
 4. Change all red boxes to white.
 5. Get the first two divs in the second row.  Take away all styling from the divs.
