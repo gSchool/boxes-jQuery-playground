@@ -41,3 +41,9 @@
 .boxType3 {
   background: blue;
 }
+
+.img{
+  background-image : url(cute.jpg);
+  background-size' : contain;
+  background-repeat : no-repeat;
+}
