@@ -7,7 +7,6 @@
   border-color: black;
   margin-left:auto;
   margin-right:auto;
-
 }
 
 .row {
@@ -40,4 +39,8 @@
 
 .boxType3 {
   background: blue;
+}
+
+.puppy {
+  background-image: url('puppy.jpeg');
 }
