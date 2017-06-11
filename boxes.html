@@ -5,6 +5,7 @@
   <script type="text/javascript" src="boxes.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Boxes!</title>
+
 </head>
 <body>
   <div id="container">
@@ -15,10 +16,10 @@
        <div class="box boxType1"></div>
      </div>
      <div id="row2" class="row">
-        <div class="box boxType2"></div>
-        <div class="box boxType3"></div>
-        <div class="box boxType1"></div>
-        <div class="box boxType2"></div>
+        <div class="box boxType2">1</div>
+        <div class="box boxType3">2</div>
+        <div class="box boxType1">3</div>
+        <div class="box boxType2">4</div>
      </div>
      <div id="row3" class="row">
         <div class="box boxType3"></div>
@@ -33,6 +34,12 @@
         <div class="box boxType1"></div>
      </div>
   </div>
+  <script>
+  $(function() {
+      console.log( "ready!" );
+  });
+
+  </script>
 </body>
 
 </html>
