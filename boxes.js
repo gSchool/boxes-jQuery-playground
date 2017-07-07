@@ -1,5 +1,5 @@
 function readyFn( jQuery ) {
-    console.log("lock up yo kids")
+    console.log("here we go")
 
 // 1. Find the secretBox on the page. Set the background color to white.  Add an h1 tag that says, "secret box!"
 
@@ -78,27 +78,38 @@ $("#container").on ("click", function (e) {
 // 3. For all box divs, add a click handler that adds an image of a cute puppy to the box.  If the image is clicked again, remove the cute puppy.
 
 
-//
-// var boxDivs = ($(".box"));
-//
-// $(boxDivs).on("click", function() {
-//   $(this).css("background","");
-//
-//   $(this).css("backgroundImage","url('puppy.jpeg')");
-//   $(this).css("backgroundSize", "cover");
-// })
+
+var boxDivs = ($(".box"));
+
+$(boxDivs).on("click", function() {
+  if ($(this).css("backgroundImage") === 'url("file:///Users/gdylanc/workspace/boxes-jQuery-playground/puppy.jpeg")'){
+    $(this).css("backgroundImage", "");
+  } else {
+    $(this).css("backgroundImage","url('puppy.jpeg')");
+    $(this).css("backgroundSize", "cover");
+  }
+})
 
 
 
 // 4. Write a click handler __on the container div__.  The click handler should turn the container background to black and the background of the original div that was clicked to white.  If the user original div that was clicked happened to be the container div, change the background of the container div to lime green.  You __should not__ use any selectors for this exercise.  You can do it completely with what is given to you in the event callback.
 
 
-$("#container").on("click", function (){
-  if ($(this) === $(".box"){
-  console.log("working divclick")}
-  $("#container").css('background-color', "black")
+$("#container").on("click", function (e){
+  console.log(e);
+    if (e.target.classList[0] !== "box") {
+      if ($("#container").css('background-color') === 'rgb(255, 255, 153)'){
+        // console.log($("#container").css('background-color'))
+        $("#container").css('background-color', "black")
+      } else {
+        $("#container").css('background-color', 'rgb(255, 255, 153)')
+      }
+    }
 })
 
+$(".box").on("click", function (){
+  $(this).css("background-color", "grey")
+})
 
 
 
