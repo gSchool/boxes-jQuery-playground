@@ -28,14 +28,17 @@
   text-align: center;
   padding-top: 10px;
   float: left;
+  /*background-image: url("bck.png");*/
 }
 
 .boxType1 {
-  background: red;
+  /*background: red;*/
+  /*background-image: url("bck.png");*/
 }
 
 .boxType2 {
-  background: green;
+  /*background: green;*/
+  /*background-image: url("bck.png");*/
 }
 
 .boxType3 {
