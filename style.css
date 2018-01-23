@@ -41,3 +41,8 @@
 .boxType3 {
   background: blue;
 }
+
+.puppyImage {
+  content:url('http://fineartamerica.com/images-simple-print/images-medium/black-puppy-square-dog-photography.jpg');
+  height: 154px;
+}
