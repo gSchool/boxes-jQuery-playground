@@ -33,6 +33,44 @@
         <div class="box boxType1"></div>
      </div>
   </div>
+  <script>
+  // $('#secretBox').css({backgroundColor: 'white'})
+  // $('#secretBox').append("<h1>Secret Box</h1>")
+  // $('#row1').children().removeClass().addClass("box boxType3")
+  // $('#row4').children().last().removeClass();
+  // $('.boxType1').css({backgroundColor: 'white'})
+  // $('#row2').children(':nth-child(1)').removeClass()
+  // $('#row2').children(':nth-child(2)').removeClass()
+  // $(".box:not(#secretBox)").css({width: "2px"})
+
+  $('#container').on('click', function(){
+    console.log(event.pageX, event.pageY);
+})
+
+  $('.boxType1').append("<a href='http://galvanize.com'>Click Me</a>")
+  $('a').on('click', function(){
+    alert ("you can't leave");
+    $('.boxType1').children().remove();
+    return false;
+  })
+  $('.box').append("<img src='http://www.pawderosa.com/images/puppies.jpg' alt='puppy' width='100%'>")
+  $('.box').children().hide();
+
+   $('.box').on('click', function(){
+   $(this).children().toggle();
+   })
+
+
+  $("#container").on('click', function(event){
+      if(event.target.id === 'container'){
+        $(this).css({'background-color':'#32CD32'})
+      }else {
+      $(this).css({'background-color':'black'})
+      $(event.target).css({'background-color':'white'})
+    }
+    })
+
+</script>
 </body>
 
 </html>
