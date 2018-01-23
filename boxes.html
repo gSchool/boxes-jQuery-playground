@@ -33,6 +33,70 @@
         <div class="box boxType1"></div>
      </div>
   </div>
+  <script type="text/javascript">
+  // excercise 1
+    // part 1
+    $( document ).ready(function(){
+      alert('Ready for DOM manipulation')
+    })
+    // part 2
+    $(function(){
+      alert("Ready for DOM manipulation")
+    })
+    // part 3
+    $( window ).load(function(){
+      alert('Ready for DOM manipulation')
+    })
+  // excercise 2
+    $(function(){
+      $('#secretBox').css({'background-color': 'white'});
+      $('#secretBox').append('<h1>SECRET BOX!!!</h1>');
+      $('#row1 > div').removeClass('boxType1');
+      $('#row1 > div').addClass('boxType3');
+      $('#row4 div:last-child').hide();
+      $('.boxType1').css({'background-color': 'white'});
+      $('#row2 div:nth-child(1)').css({'background-color': 'transparent'});
+      $('#row2 div:nth-child(2)').css({'background-color': 'transparent'});
+      $('#container >> :not(#secretBox)').css({'width': '2px'})
+    })
+  // excercise 3
+    $(function(){
+    // part 1
+      $('#container').on('click', function(i){
+        console.log(i.pageX, i.pageY);
+      });
+    })
+    // part 2
+    $(function(){
+      $('.boxType1').wrap('<a href="http://www.galvanize.com/"></a>');
+      $('a').click(function( event ){
+        event.preventDefault()
+        alert('YOU CAN NEVER LEAVE THIS PAGE');
+      })
+    })
+    // part 3
+    $(function(){
+      $('#container >> div').on('click',function(event){
+        if($(this).attr('data-click-state') == 1) {
+          $(this).attr({'data-click-state': 0})
+          $(this).css({'background-image': ''})
+        } else {
+          $(this).attr({'data-click-state': 1})
+          $(this).css({'background-image': 'url(https://placekitten.com/154/154)'})
+        }
+      })
+    })
+    // part 4
+    $(function(){
+      $('#container').on('click', function(event){
+        $(this).css({'background-color': 'black'})
+        $(event.target).css({'background-color': 'white'})
+        if (event.target == this) {
+          $(this).css({'background-color': 'rgb(50, 255, 46)'})
+        }
+      })
+    })
+  </script>
 </body>
 
 </html>
